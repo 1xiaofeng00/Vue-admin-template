@@ -235,11 +235,11 @@ export default {
       this.attrInfo.attrValueList.forEach((item) => {
         //这样书写也可以给属性值添加flag字段，但是会发现视图不会跟着变化（因为flag不是响应式数据）
         //因为Vue无法普通的新增property（属性）,这样书写的属性并非响应式属性（数据变化视图跟着变）
-        item.flag = false;
+        // item.flag = false;
 
         //响应式添加
         //第一个参数：对象   第二个参数：添加新的响应式属性   第三个参数：新的属性的属性值
-        // this.$set(item, "flag", false);
+        this.$set(item, "flag", false);
       });
     },
 
